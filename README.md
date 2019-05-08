@@ -1,5 +1,9 @@
 # Improving Usability of Pubmed
 
+### Goal
+
+### Concept Map
+
 ### Phase I - PubMed Query using Mesh Ontology terms
 
 1. Download PubMed Dump from [https://www.nlm.nih.gov/databases/download/pubmed_medline.html]
