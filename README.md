@@ -33,10 +33,10 @@ Therefore, we’re building a **search capability for wider usage** that can per
 
 ### Contributors
 
-* Shruthi Chari
-* Nkechinyere Agu
-* Neha Keshan
-* Niddhi Rastogi
-* Oshani W. Seneviratne
+* __Shruthi Chari__
+* __Nkechinyere Agu__
+* __Neha Keshan__
+* __Nidhi Rastogi__
+* __Oshani W. Seneviratne__
 
  
