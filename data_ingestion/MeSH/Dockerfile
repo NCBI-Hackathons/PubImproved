@@ -11,5 +11,7 @@ COPY . /app
 
 RUN pip install requests
 RUN pip install rdflib
+RUN pip install xml.etree
+
 
 CMD [ "python", "./mesh_load.py" ]
