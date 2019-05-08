@@ -10,7 +10,8 @@ For example, search for “Diabetes Melitus” may not be a common practice. But
 
 Therefore, we’re building a **search capability for wider usage** that can perform search on the Pubmed library of articles using commonly used words. We’ve divided our project into phases:
 
-```1. Given a search query, extract MeSH terms and display relevant publications
+```
+1. Given a search query, extract MeSH terms and display relevant publications
 2. For restrictive queries that do not yield any or enough results, relax search terms and still display articles that are relevant and related to the User.
 3. Enhance search capabilities using commonly used terms
 4. Add multiple commonly used terms for search
