@@ -33,9 +33,10 @@ Therefore, we’re building a **search capability for wider usage** that can per
 
 ### Contributors
 
-..***Shruthi Chari**
-..***Nkechinyere Agu**
-..*__**Neha Keshan**__
-..*__**Niddhi Rastogi**__
-..*__**Oshani W. Seneviratne**__
+..* **Shruthi Chari**
+..* **Nkechinyere Agu**
+..* **Neha Keshan**
+..* **Niddhi Rastogi*
+..* **Oshani W. Seneviratne**
+
  
