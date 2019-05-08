@@ -19,8 +19,7 @@ Therefore, we’re building a **search capability for wider usage** that can per
 ```
 
 ### Work Flow Diagram
-   <!--<img src="Slide1.png" width="100%" height="100%">-->
-   <iframe src="NewWorkflowDiagram.pdf" style="width:100%; height: 500px"></iframe>
+   <img src="Slide1.png" width="100%" height="100%">
 
 
 ### Steps in Phase I - PubMed Query using Mesh Ontology terms from the User Query
@@ -31,4 +30,12 @@ Therefore, we’re building a **search capability for wider usage** that can per
 3. Download MeSH Ontology [https://www.nlm.nih.gov/mesh/filelist.html]
 4. MeSH terms are queried from the search Query provided by the User
 ..*These MeSH terms are then used to find all the related articles from the PubMed
+
+### Contributors
+
+..* __**Shruthi Chari** __
+..* __**Nkechinyere Agu**__
+..* __**Neha Keshan**__
+..* __**Niddhi Rastogi**__
+..* __**Oshani W. Seneviratne**__
  
