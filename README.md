@@ -35,8 +35,8 @@ Therefore, we’re building a **search capability for wider usage** that can per
 ### Contributors
 
 * _Shruthi Chari_
-* _Nkechinyere Agu_
 * _Neha Keshan_
+* _Nkechinyere Agu_
 * _Nidhi Rastogi_
 * _Oshani W. Seneviratne_
 
