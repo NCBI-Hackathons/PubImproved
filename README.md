@@ -17,6 +17,8 @@ Therefore, we’re building a **search capability for wider usage** that can per
 5. Recommend search terms that can potentially help with a more targeted search
 
 ### Work Flow Diagram
+   <img src="Slide1.png" width="100%" height="100%">
+
 
 ### Steps in Phase I - PubMed Query using Mesh Ontology terms from the User Query
 
