@@ -2,7 +2,7 @@
 
 ### Goal
 
-What is Pubmed: PubMed is a free search engine accessing primarily the MEDLINE database of references and abstracts on life sciences and biomedical topics.
+`What is Pubmed:` PubMed is a free search engine accessing primarily the MEDLINE database of references and abstracts on life sciences and biomedical topics.
 
 Current search capabilities on Pubmed (the latest alpha version)allows for search on Pubmed articles which is based on mesh terms. It’s impractical to assume that non-experts know about the mesh terms or their usage. It does not consider cultural differences in the terms used to describe diseases, conditions, and related information.
 
@@ -10,11 +10,12 @@ For example, search for “Diabetes Melitus” may not be a common practice. But
 
 Therefore, we’re building a **search capability for wider usage** that can perform search on the Pubmed library of articles using commonly used words. We’ve divided our project into phases:
 
-1. Given a search query, extract MeSH terms and display relevant publications
+```1. Given a search query, extract MeSH terms and display relevant publications
 2. For restrictive queries that do not yield any or enough results, relax search terms and still display articles that are relevant and related to the User.
 3. Enhance search capabilities using commonly used terms
 4. Add multiple commonly used terms for search
 5. Recommend search terms that can potentially help with a more targeted search
+```
 
 ### Work Flow Diagram
    <img src="Slide1.png" width="100%" height="100%">
