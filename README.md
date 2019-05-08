@@ -19,7 +19,8 @@ Therefore, we’re building a **search capability for wider usage** that can per
 ```
 
 ### Work Flow Diagram
-   <img src="Slide1.png" width="100%" height="100%">
+   <!--<img src="Slide1.png" width="100%" height="100%">-->
+   <iframe src="NewWorkflowDiagram.pdf" style="width:100%; height: 500px"></iframe>
 
 
 ### Steps in Phase I - PubMed Query using Mesh Ontology terms from the User Query
