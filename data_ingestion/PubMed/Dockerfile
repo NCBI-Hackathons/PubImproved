@@ -12,6 +12,6 @@ COPY . /app
 RUN pip install requests
 RUN pip install rdflib
 RUN pip install xml.etree
+RUN pip install urllib
 
-
-CMD [ "python", "./mesh_load.py" ]
+CMD [ "python", "./pubmed_load.py" ]
