@@ -2,3 +2,4 @@ rdflib>=4.0
 pandas
 requests
 urllib3<1.25,>=1.21.1
+xmltodict
