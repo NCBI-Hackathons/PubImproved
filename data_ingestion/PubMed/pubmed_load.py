@@ -13,15 +13,16 @@ def download_pubmed(disease_term):
     Further the data for each of the PMIDs is stored as separate JSON files
     """
     api_key = open("API_Key.keys","r").readline()
-    url_address = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=' + disease_term + '+randomized+controlled+trial%5Bpublication+type%5D&retmax=1000&rettype=text'
+    url_address = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=' + disease_term + '+randomized+controlled+trial%5Bpublication+type%5D&retmax=10&rettype=text'
     print(url_address)
     #url_encodedaddress = urllib.parse.urlencode(url_address)
     r = requests.get(url_address)
     xml_content = ElementTree.fromstring(r.content)
     print(xml_content)
     #Add a pitfall check for empty id nodes
+    data_dir = os.makedirs("data_new/", exist_ok=True)
     ids = [id_node.text for id_node in xml_content.findall('.//Id')]
-    already_existingfiles = [re.match(r'(.*).xml', id_present) for id_present in os.listdir("data/")]
+    already_existingfiles = [re.match(r'(.*).xml', id_present) for id_present in os.listdir("data_new/")]
     #Ideally when there is an elasticsearch instance running, we would feed the files into that
     for pmid in ids:
         #Only create new files for unseen pmids
@@ -30,7 +31,7 @@ def download_pubmed(disease_term):
             #Fetch content for good requests
             if request_idfetch.status_code == 200:
                 xml_contentfetch = ElementTree.fromstring(request_idfetch.content)
-                with open("data/" + pmid + ".xml", "w") as f:
+                with open("data_new/" + pmid + ".xml", "w") as f:
                     f.write(ElementTree.tostring(xml_contentfetch).decode("utf-8"))
         else:
             print("ID " + pmid + " already exists not fetching content")
@@ -62,8 +63,8 @@ def meshanalysis_ondocument(data_dir):
     print("Number of files with no associated mesh terms ", count_nomesh)   
 
 
-#download_pubmed('diabetes')
-meshanalysis_ondocument('data/')
+download_pubmed('diabetes')
+#meshanalysis_ondocument('data/')
 
 # g = Graph()
 # g.parse("data/mesh2019.nt", format="nt")
