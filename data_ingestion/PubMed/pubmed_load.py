@@ -85,7 +85,13 @@ def meshanalysis_ondocument(data_dir):
     mydata = data.to_csv('meshcount.csv', sep='|',encoding='utf-8')
     print("Number of files with no associated mesh terms ", count_nomesh)   
 
-
-#download_pubmed('diabetes')
-convertxml_tojson('data/')
-#meshanalysis_ondocument('data/')
+if __name__ == '__main__':
+    '''
+    This entry level function:
+    1. download_pubmed: downloads data from Pubmed for a particular term
+    2. convertxml_tojson: converts this data dump to json
+    3. meshanalysis_ondocument: additionally accumulates MESH terms for all files to build a wordcloud
+    '''
+    #download_pubmed('diabetes')
+    convertxml_tojson('data/')
+    #meshanalysis_ondocument('data/')
