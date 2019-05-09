@@ -38,8 +38,8 @@ Therefore, we’re building a **search capability for wider usage** that can per
 
 ### Contributors
 
-* _Shruthi Chari_
-* _Neha Keshan_
-* _Nkechinyere Agu_
-* _Nidhi Rastogi_
-* _Oshani W. Seneviratne_
+* _Shruthi Chari_   -  charis at rpi dot edu
+* _Neha Keshan_     -  keshan at rpi dot edu
+* _Nkechinyere Agu_ -  agun at rpi dot edu
+* _Nidhi Rastogi_   -  raston2 at rpi dot edu
+* _Oshani W. Seneviratne_  - senevo at rpi dot edu
