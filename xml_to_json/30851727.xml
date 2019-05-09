@@ -1,0 +1,266 @@
+<PubmedArticleSet>
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">30851727</PMID>
+        <DateCompleted>
+            <Year>2019</Year>
+            <Month>04</Month>
+            <Day>23</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2019</Year>
+            <Month>04</Month>
+            <Day>23</Day>
+        </DateRevised>
+        <Article PubModel="Electronic">
+            <Journal>
+                <ISSN IssnType="Electronic">1475-2840</ISSN>
+                <JournalIssue CitedMedium="Internet">
+                    <Volume>18</Volume>
+                    <Issue>1</Issue>
+                    <PubDate>
+                        <Year>2019</Year>
+                        <Month>03</Month>
+                        <Day>09</Day>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Cardiovascular diabetology</Title>
+                <ISOAbbreviation>Cardiovasc Diabetol</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>Asymptomatic coronary artery disease in a Norwegian cohort with type 2 diabetes: a prospective angiographic study with intravascular ultrasound evaluation.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>26</MedlinePgn>
+            </Pagination>
+            <ELocationID EIdType="doi" ValidYN="Y">10.1186/s12933-019-0832-2</ELocationID>
+            <Abstract>
+                <AbstractText Label="AIMS">The prevalence of asymptomatic coronary artery disease (CAD) in type 2 diabetes (T2D) is unclear. We investigated the extent and prevalence of asymptomatic CAD in T2D patients by utilizing invasive coronary angiography (ICA) and intravascular ultrasound (IVUS), and whether CAD progression, evaluated by ICA, could be modulated with a multi-intervention to reduce cardiovascular (CV) risk.</AbstractText>
+                <AbstractText Label="METHODS">Fifty-six T2D patients with&#8201;&#8805;&#8201;1 additional CV risk factor participated in a 2&#160;year randomized controlled study comparing hospital-based multi-intervention (multi, n&#8201;=&#8201;30) versus standard care (stand, n&#8201;=&#8201;26), with a pre-planned follow-up at year seven. They underwent ICA at baseline and both ICA and IVUS at year seven. ICA was described by conventional CAD severity and extent scores. IVUS was described by maximal intimal thickness (MIT), percent and total atheroma volume and compared with individuals without T2D and CAD (heart transplant donors who had IVUS performed 7-11&#160;weeks post-transplant, n&#8201;=&#8201;147).</AbstractText>
+                <AbstractText Label="RESULTS">Despite CV risk reduction in multi after 2&#160;years intervention, there was no between-group difference in the progression of CAD at year seven. Overall, the prevalence of CAD defined by MIT&#8201;&#8805;&#8201;0.5&#160;mm in the T2DM subjects was 84%, and as compared to the non-T2DM controls there was a significantly higher atheroma burden (mean MIT, PAV and TAV in the T2D population were 0.75&#8201;&#177;&#8201;0.27&#160;mm, 33.8&#8201;&#177;&#8201;9.8% and 277.0&#8201;&#177;&#8201;137.3&#160;mm<sup>3</sup> as compared to 0.41&#8201;&#177;&#8201;0.19&#160;mm, 17.8&#8201;&#177;&#8201;7.3% and 134.9&#8201;&#177;&#8201;100.6&#160;mm<sup>3</sup> in the reference population).</AbstractText>
+                <AbstractText Label="CONCLUSION">We demonstrated that a 2&#160;year multi-intervention, despite improvement in CV risk factors, did not influence angiographic progression of CAD. Further, IVUS revealed that the prevalence of asymptomatic CAD in T2D patients is high, suggesting a need for a broader residual CV risk management using alternative approaches. Trial registration Clinical trials.gov id: NCT00133718 ( https://clinicaltrials.gov/ct2/show/NCT00133718 ).</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Arora</LastName>
+                    <ForeName>Satish</ForeName>
+                    <Initials>S</Initials>
+                    <AffiliationInfo>
+                        <Affiliation>Department of Cardiology, Oslo University Hospital Rikshospitalet, Oslo, Norway.</Affiliation>
+                    </AffiliationInfo>
+                    <AffiliationInfo>
+                        <Affiliation>KG Jebsen Center for Cardiac Research, University of Oslo, and Center for Heart Failure Research, Oslo University Hospital, Oslo, Norway.</Affiliation>
+                    </AffiliationInfo>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Ofstad</LastName>
+                    <ForeName>Anne Pernille</ForeName>
+                    <Initials>AP</Initials>
+                    <AffiliationInfo>
+                        <Affiliation>Department of Medical Research, B&#230;rum Hospital Vestre Viken Hospital Trust, Gjettum, PB 800, 3004, Drammen, Norway. Annepernille@hotmail.com.</Affiliation>
+                    </AffiliationInfo>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Ulimoen</LastName>
+                    <ForeName>Geir R</ForeName>
+                    <Initials>GR</Initials>
+                    <AffiliationInfo>
+                        <Affiliation>Department of Medical Research, B&#230;rum Hospital Vestre Viken Hospital Trust, Gjettum, PB 800, 3004, Drammen, Norway.</Affiliation>
+                    </AffiliationInfo>
+                    <AffiliationInfo>
+                        <Affiliation>Department of Radiology, Akershus University Hospital, L&#248;renskog, Norway.</Affiliation>
+                    </AffiliationInfo>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Birkeland</LastName>
+                    <ForeName>K&#229;re I</ForeName>
+                    <Initials>KI</Initials>
+                    <AffiliationInfo>
+                        <Affiliation>Department of Transplantation Medicine, Oslo University Hospital Rikshospitalet, Oslo, Norway.</Affiliation>
+                    </AffiliationInfo>
+                    <AffiliationInfo>
+                        <Affiliation>Faculty of Medicine, University of Oslo, Oslo, Norway.</Affiliation>
+                    </AffiliationInfo>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Endresen</LastName>
+                    <ForeName>Knut</ForeName>
+                    <Initials>K</Initials>
+                    <AffiliationInfo>
+                        <Affiliation>Department of Cardiology, Oslo University Hospital Rikshospitalet, Oslo, Norway.</Affiliation>
+                    </AffiliationInfo>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Gullestad</LastName>
+                    <ForeName>Lars</ForeName>
+                    <Initials>L</Initials>
+                    <AffiliationInfo>
+                        <Affiliation>Department of Cardiology, Oslo University Hospital Rikshospitalet, Oslo, Norway.</Affiliation>
+                    </AffiliationInfo>
+                    <AffiliationInfo>
+                        <Affiliation>Faculty of Medicine, University of Oslo, Oslo, Norway.</Affiliation>
+                    </AffiliationInfo>
+                    <AffiliationInfo>
+                        <Affiliation>KG Jebsen Center for Cardiac Research, University of Oslo, and Center for Heart Failure Research, Oslo University Hospital, Oslo, Norway.</Affiliation>
+                    </AffiliationInfo>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Johansen</LastName>
+                    <ForeName>Odd Erik</ForeName>
+                    <Initials>OE</Initials>
+                    <AffiliationInfo>
+                        <Affiliation>Department of Medical Research, B&#230;rum Hospital Vestre Viken Hospital Trust, Gjettum, PB 800, 3004, Drammen, Norway.</Affiliation>
+                    </AffiliationInfo>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <DataBankList CompleteYN="Y">
+                <DataBank>
+                    <DataBankName>ClinicalTrials.gov</DataBankName>
+                    <AccessionNumberList>
+                        <AccessionNumber>NCT00133718</AccessionNumber>
+                    </AccessionNumberList>
+                </DataBank>
+            </DataBankList>
+            <PublicationTypeList>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+                <PublicationType UI="D016449">Randomized Controlled Trial</PublicationType>
+                <PublicationType UI="D013485">Research Support, Non-U.S. Gov't</PublicationType>
+            </PublicationTypeList>
+            <ArticleDate DateType="Electronic">
+                <Year>2019</Year>
+                <Month>03</Month>
+                <Day>09</Day>
+            </ArticleDate>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>England</Country>
+            <MedlineTA>Cardiovasc Diabetol</MedlineTA>
+            <NlmUniqueID>101147637</NlmUniqueID>
+            <ISSNLinking>1475-2840</ISSNLinking>
+        </MedlineJournalInfo>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000368">Aged</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D058070">Asymptomatic Diseases</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D003131">Combined Modality Therapy</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="Y" UI="D017023">Coronary Angiography</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D003324">Coronary Artery Disease</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000000981">diagnostic imaging</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000453">epidemiology</QualifierName>
+                <QualifierName MajorTopicYN="Y" UI="Q000517">prevention &amp; control</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D003924">Diabetes Mellitus, Type 2</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000175">diagnosis</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000453">epidemiology</QualifierName>
+                <QualifierName MajorTopicYN="Y" UI="Q000628">therapy</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D003925">Diabetic Angiopathies</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000000981">diagnostic imaging</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000453">epidemiology</QualifierName>
+                <QualifierName MajorTopicYN="Y" UI="Q000517">prevention &amp; control</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D018450">Disease Progression</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005260">Female</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006801">Humans</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008297">Male</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008875">Middle Aged</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" Type="Geographic" UI="D009664">Norway</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000453">epidemiology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011237">Predictive Value of Tests</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D015995">Prevalence</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011446">Prospective Studies</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D012307">Risk Factors</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D013997">Time Factors</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D016896">Treatment Outcome</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="Y" UI="D018084">Ultrasonography, Interventional</DescriptorName>
+            </MeshHeading>
+        </MeshHeadingList>
+        <KeywordList Owner="NOTNLM">
+            <Keyword MajorTopicYN="Y">Atheroma burden</Keyword>
+            <Keyword MajorTopicYN="Y">Coronary artery disease</Keyword>
+            <Keyword MajorTopicYN="Y">Intravascular ultrasound</Keyword>
+            <Keyword MajorTopicYN="Y">Invasive coronary angiography</Keyword>
+            <Keyword MajorTopicYN="Y">Multi-factorial treatment</Keyword>
+            <Keyword MajorTopicYN="Y">Type 2 diabetes mellitus</Keyword>
+        </KeywordList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="received">
+                <Year>2018</Year>
+                <Month>11</Month>
+                <Day>21</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="accepted">
+                <Year>2019</Year>
+                <Month>02</Month>
+                <Day>19</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>2019</Year>
+                <Month>3</Month>
+                <Day>11</Day>
+                <Hour>6</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>2019</Year>
+                <Month>3</Month>
+                <Day>11</Day>
+                <Hour>6</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>2019</Year>
+                <Month>4</Month>
+                <Day>24</Day>
+                <Hour>6</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>epublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">30851727</ArticleId>
+            <ArticleId IdType="doi">10.1186/s12933-019-0832-2</ArticleId>
+            <ArticleId IdType="pii">10.1186/s12933-019-0832-2</ArticleId>
+            <ArticleId IdType="pmc">PMC6408758</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>
+
+</PubmedArticleSet>
