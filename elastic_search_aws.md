@@ -13,7 +13,7 @@ Default output format [None]: json
 
 `$ pip3 install awscli --upgrade --user`
 
-# Use pip to install the AWS CLI.
+### Use pip to install the AWS CLI.
 `$ pip3 install awscli --upgrade --user`
 `$ pip install --upgrade pip`
 
@@ -22,6 +22,6 @@ Default output format [None]: json
 
 `$ pip3 install awscli --upgrade --user`
 
-#You can verify which folder pip installed the AWS CLI to by running the following command.
+### You can verify which folder pip installed the AWS CLI to by running the following command.
 `$ which aws`
 (o/p - /home/ubuntu/.local/bin/aws)
