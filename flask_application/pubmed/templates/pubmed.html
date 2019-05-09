@@ -12,7 +12,7 @@
 						<p></p>
 						 &nbsp;
 					</div>
-					<form action="#">
+					<form role="form" action ="{{ url_for('result_list') }}" method="post">
 							<div class="login-bg">
 								
 								<div class="row">
@@ -20,7 +20,7 @@
 										<label class="login2 pull-right pull-right-pro">Search Phrase</label>
 									</div>
 									<div class="col-lg-12">
-										<input type="text" class="form-control" />
+										<input type="text" class="form-control" name="SearchPhrase"/>
 									</div>
 								</div>
 								<p></p>
@@ -30,7 +30,7 @@
 										<label class="login2 pull-right pull-right-pro">Mesh Terms</label>
 									</div>
 									<div class="col-lg-12">
-										<input type="text" class="form-control" />
+										<input type="text" class="form-control" name="MeshTerms"/>
 									</div>
 								</div>
 								<p></p>
@@ -40,7 +40,7 @@
 										<label class="login2 pull-right pull-right-pro">Publication Year</label>
 									</div>
 									<div class="col-lg-12">
-										<input type="text" class="form-control" />
+										<input type="text" class="form-control" name="PublicationYear"/>
 									</div>
 								</div>
 								<p></p>
@@ -50,7 +50,7 @@
 										<label class="login2 pull-right pull-right-pro">Publication Year</label>
 									</div>
 									<div class="col-lg-12">
-										<input type="text" class="form-control" />
+										<input type="text" class="form-control" name="Gender"/>
 									</div>
 								</div>
 								<p></p>

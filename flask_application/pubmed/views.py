@@ -10,6 +10,19 @@ app = Flask(__name__)
 def index():
     return render_template('pubmed.html')
 
+
+@app.route('/CMView', methods=['GET','POST'])
+def result_list():
+    if request.method == 'POST':
+        SearchPhrase = request.form['SearchPhrase']
+        MeshTerms = request.form['MeshTerms']
+        PublicationYear = request.form['PublicationYear']
+        Gender = request.form['Gender']
+        
+        data = pd.DataFrame({'SearchPhrase':SearchPhrase,'MeshTerms':MeshTerms, 'PublicationYear':PublicationYear, 'Gender':Gender}, index=[0])
+#        annotation(data)
+    return render_template('result-list.html')
+
 @app.route('/bibs')
 def bibs():
     _items = db.bibsdb.find()
