@@ -4,8 +4,9 @@ import urllib.parse
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 MESH_DOWNLOAD_URL = "ftp://ftp.nlm.nih.gov/online/mesh/rdf/2019/mesh2019.nt.gz"
-BLAZEGRAPH_ENDPOINT_URL = "http://192.168.1.128:9999/blazegraph/sparql?query="
-OUTPUT_FILENAME = 'output/mesh_labels_notes.csv'
+BLAZEGRAPH_ENDPOINT_URL = "http://10.177.189.55:9999/blazegraph/sparql"
+LABELS_NOTES_OUTPUT_FILENAME = 'output/mesh_labels_notes.csv'
+HIERARCHY_OUTPUT_FILENAME = 'output/mesh_labels_narrower_broader.csv'
 
 def download_file(url):
     """
@@ -32,20 +33,33 @@ rdfs:label ?label;
 }"""
 
 termHierarchyQuery = """
-select * 
-{?concept <http://id.nlm.nih.gov/mesh/vocab#narrowerConcept> ?narrowerConcept;
+select distinct ?term ?label ?narrowerLabel ?broaderLabel 
+{?term <http://id.nlm.nih.gov/mesh/vocab#preferredConcept> ?concept.
+?concept <http://id.nlm.nih.gov/mesh/vocab#narrowerConcept> ?narrowerConcept;
+          <http://id.nlm.nih.gov/mesh/vocab#broaderConcept> ?broaderConcept;
           rdfs:label ?label.
  ?narrowerConcept rdfs:label ?narrowerLabel.
-} 
-LIMIT 100
+ ?broaderConcept rdfs:label ?broaderLabel.
+}
 """
 
-sparql = SPARQLWrapper("http://192.168.1.128:9999/blazegraph/sparql")
-sparql.setQuery(synonymQuery)
+sparql = SPARQLWrapper(BLAZEGRAPH_ENDPOINT_URL)
 sparql.setReturnFormat(JSON)
+
+sparql.setQuery(synonymQuery)
 results = sparql.query().convert()
 
-with open(OUTPUT_FILENAME, 'w') as f:
+with open(LABELS_NOTES_OUTPUT_FILENAME, 'w') as f:
+    f.write("%s\n" % "term,label,note")
     for result in results["results"]["bindings"]:
         row = str(result["term"]["value"]) + "," + str(result["label"]["value"]) + "," + str(result["note"]["value"])
+        f.write("%s\n" % row)
+
+sparql.setQuery(termHierarchyQuery)
+results = sparql.query().convert()
+
+with open(HIERARCHY_OUTPUT_FILENAME, 'w') as f:
+    f.write("%s\n" % "term.label,narrower,broader")
+    for result in results["results"]["bindings"]:
+        row = str(result["term"]["value"]) + "," + str(result["label"]["value"]) + "," + str(result["narrowerLabel"]["value"]) + "," + str(result["broaderLabel"]["value"])
         f.write("%s\n" % row)
