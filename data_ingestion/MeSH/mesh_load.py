@@ -3,6 +3,10 @@ import requests
 import urllib.parse
 from SPARQLWrapper import SPARQLWrapper, JSON
 
+"""
+TODO: Spawn a blazegraph instance from docker, download the gz, load it into the blazegraph instance.
+"""
+
 MESH_DOWNLOAD_URL = "ftp://ftp.nlm.nih.gov/online/mesh/rdf/2019/mesh2019.nt.gz"
 BLAZEGRAPH_ENDPOINT_URL = "http://10.177.189.55:9999/blazegraph/sparql"
 LABELS_NOTES_OUTPUT_FILENAME = 'output/mesh_labels_notes.csv'
@@ -52,7 +56,7 @@ results = sparql.query().convert()
 with open(LABELS_NOTES_OUTPUT_FILENAME, 'w') as f:
     f.write("%s\n" % "term,label,note")
     for result in results["results"]["bindings"]:
-        row = str(result["term"]["value"]) + "," + str(result["label"]["value"]) + "," + str(result["note"]["value"])
+        row = str(result["term"]["value"]) + " | " + str(result["label"]["value"]) + " | " + str(result["note"]["value"])
         f.write("%s\n" % row)
 
 sparql.setQuery(termHierarchyQuery)
@@ -61,5 +65,5 @@ results = sparql.query().convert()
 with open(HIERARCHY_OUTPUT_FILENAME, 'w') as f:
     f.write("%s\n" % "term.label,narrower,broader")
     for result in results["results"]["bindings"]:
-        row = str(result["term"]["value"]) + "," + str(result["label"]["value"]) + "," + str(result["narrowerLabel"]["value"]) + "," + str(result["broaderLabel"]["value"])
+        row = str(result["term"]["value"]) + " | " + str(result["label"]["value"]) + " | " + str(result["narrowerLabel"]["value"]) + " | " + str(result["broaderLabel"]["value"])
         f.write("%s\n" % row)
