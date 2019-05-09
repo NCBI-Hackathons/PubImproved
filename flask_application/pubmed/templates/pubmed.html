@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- welcome Project, sale area start-->
+<div class="welcome-adminpro-area">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+				<div class="welcome-wrapper shadow-reset res-mg-t mg-b-30">
+					<div class="welcome-adminpro-title">
+						<h1>Paper Search</h1>
+						<p></p>
+						 &nbsp;
+					</div>
+					<form action="#">
+							<div class="login-bg">
+								
+								<div class="row">
+									<div class="col-lg-4">
+										<label class="login2 pull-right pull-right-pro">Search Phrase</label>
+									</div>
+									<div class="col-lg-12">
+										<input type="text" class="form-control" />
+									</div>
+								</div>
+								<p></p>
+								 &nbsp;
+								<div class="row">
+									<div class="col-lg-4">
+										<label class="login2 pull-right pull-right-pro">Mesh Terms</label>
+									</div>
+									<div class="col-lg-12">
+										<input type="text" class="form-control" />
+									</div>
+								</div>
+								<p></p>
+								 &nbsp;
+								<div class="row">
+									<div class="col-lg-4">
+										<label class="login2 pull-right pull-right-pro">Publication Year</label>
+									</div>
+									<div class="col-lg-12">
+										<input type="text" class="form-control" />
+									</div>
+								</div>
+								<p></p>
+								 &nbsp;
+								<div class="row">
+									<div class="col-lg-4">
+										<label class="login2 pull-right pull-right-pro">Publication Year</label>
+									</div>
+									<div class="col-lg-12">
+										<input type="text" class="form-control" />
+									</div>
+								</div>
+								<p></p>
+								 &nbsp;
+								<div class="row">
+									<div class="col-lg-4"></div>
+									<div class="col-lg-12">
+										<div class="login-button-pro">
+											<button type="submit" class="login-button login-button-rg">Search</button>
+										</div>
+									</div>
+								</div>
+							</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-8 col-md-6 col-sm-12 col-xs-200">
+				<div class="dashboard-line-chart shadow-reset mg-b-30">
+					<img src="{{url_for('static', filename='img/pubmed_work_cloud.png')}}"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- welcome Project, sale area start-->
+
+
+<!-- income order visit user Start -->
+<div class="income-order-visit-user-area">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+				<div class="income-dashone-total shadow-reset nt-mg-b-30">
+					<div class="income-title">
+						<div class="row">
+						<div class="col-lg-3">
+							<img src="{{url_for('static', filename='img/feature-search.svg')}}" style="width:75px; height:75px"/>
+						</div>
+						<div class="col-lg-8">
+						&nbsp;
+							<h3>Cutting-edge search</h3>
+						</div>
+							
+						</div>
+					</div>
+					<div class="income-dashone-pro">
+						<div class="income-range">
+							<p>PubMed Labs includes a new search algorithm that uses machine learning to more accurately find the best matches.</p>
+						</div>
+						&nbsp;
+						<div class="col-lg-20">
+							<button type="submit" class="login-button login-button-rg">Read More</button>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+				<div class="income-dashone-total shadow-reset nt-mg-b-30">
+					<div class="income-title">
+						<div class="row">
+						<div class="col-lg-3">
+							<img src="{{url_for('static', filename='img/feature-mobile.svg')}}" style="width:75px; height:75px"/>
+						</div>
+						<div class="col-lg-8">
+						&nbsp;
+							<h3>Clean, mobile-first design</h3>
+						</div>
+							
+						</div>
+					</div>
+					<div class="income-dashone-pro">
+						<div class="income-range">
+							<p>PubMed Labs uses a clean and modern user interface designed to work well on your phone as well as other devices.</p>
+						</div>
+						&nbsp;
+						<div class="col-lg-20">
+							<button type="submit" class="login-button login-button-rg">Read More</button>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+				<div class="income-dashone-total shadow-reset nt-mg-b-30">
+					<div class="income-title">
+						<div class="row">
+							<div class="col-lg-3">
+								<img src="{{url_for('static', filename='img/feature-snippets.svg')}}" style="width:75px; height:75px"/>
+							</div>
+							<div class="col-lg-8">
+							&nbsp;
+								<h3>Article snippets</h3>
+							</div>
+							
+						</div>
+					</div>
+					<div class="income-dashone-pro">
+						<div class="income-range">
+							<p>To help you identify articles of interest, PubMed labs includes “snippets” – highlights from the article abstract that are related to your query.</p>
+						</div>
+						&nbsp;
+						<div class="col-lg-20">
+							<button type="submit" class="login-button login-button-rg">Read More</button>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- income order visit user End -->
+
+{% endblock %}
+
