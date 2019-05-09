@@ -4,6 +4,7 @@ from xml.etree import ElementTree
 import urllib
 import re
 import os
+import pandas as pd
 
 def download_pubmed(disease_term):
     """
@@ -42,11 +43,22 @@ def meshanalysis_ondocument(data_dir):
     '''
     count_nomesh = 0
     files = os.listdir(data_dir)
+    mesh_countdict = {}
     for pmid_file in files:
         pmid_filecont = ElementTree.parse(data_dir + pmid_file)
         mesh_list = pmid_filecont.findall('.//MeshHeading') 
         if len(mesh_list) == 0:
             count_nomesh += 1
+        else:
+            #Write frequency to MESH terms file for now
+            for mesh_termnode in mesh_list:
+                mesh_term = mesh_termnode.find('DescriptorName').text
+                if mesh_term not in mesh_countdict.keys():
+                    mesh_countdict[mesh_term] = 1
+                else:
+                    mesh_countdict[mesh_term] += 1
+    data = pd.Series(mesh_countdict)
+    mydata = data.to_csv('meshcount.csv', sep='|',encoding='utf-8')
     print("Number of files with no associated mesh terms ", count_nomesh)   
 
 
