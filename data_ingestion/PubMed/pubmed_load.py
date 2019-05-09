@@ -5,6 +5,8 @@ import urllib
 import re
 import os
 import pandas as pd
+import json
+import xmltodict
 
 def download_pubmed(disease_term):
     """
@@ -20,9 +22,9 @@ def download_pubmed(disease_term):
     xml_content = ElementTree.fromstring(r.content)
     print(xml_content)
     #Add a pitfall check for empty id nodes
-    data_dir = os.makedirs("data_new/", exist_ok=True)
+    data_dir = os.makedirs("data/", exist_ok=True)
     ids = [id_node.text for id_node in xml_content.findall('.//Id')]
-    already_existingfiles = [re.match(r'(.*).xml', id_present) for id_present in os.listdir("data_new/")]
+    already_existingfiles = [re.match(r'(.*).xml', id_present) for id_present in os.listdir("data/")]
     #Ideally when there is an elasticsearch instance running, we would feed the files into that
     for pmid in ids:
         #Only create new files for unseen pmids
@@ -31,11 +33,32 @@ def download_pubmed(disease_term):
             #Fetch content for good requests
             if request_idfetch.status_code == 200:
                 xml_contentfetch = ElementTree.fromstring(request_idfetch.content)
-                with open("data_new/" + pmid + ".xml", "w") as f:
+                with open("data/" + pmid + ".xml", "w") as f:
                     f.write(ElementTree.tostring(xml_contentfetch).decode("utf-8"))
         else:
             print("ID " + pmid + " already exists not fetching content")
     print(ids)
+
+def convertxml_tojson(data_dir):
+    '''
+    Given the directory of native XML files, this function converts it to JSON
+    '''
+    files = [file_name for file_name in os.listdir(data_dir) if os.path.isfile(os.path.join(data_dir, file_name))]
+    count_pmids=0
+    for pmid_file in files:
+        with open(data_dir + pmid_file, 'r') as f:
+            xmlString = f.read() 
+        
+        pmid = re.match(r'(.*).xml', pmid_file)[1]    
+        
+        jsonString = json.dumps(xmltodict.parse(xmlString), indent=4)
+        os.makedirs("data/json/", exist_ok=True)
+        json_filename = 'data/json/' + pmid + '.json'
+        with open(json_filename,'w') as f:
+            f.write(jsonString)
+        count_pmids += 1
+    print("Files converted to json : ", count_pmids)
+
 
 def meshanalysis_ondocument(data_dir):
     '''
@@ -63,7 +86,8 @@ def meshanalysis_ondocument(data_dir):
     print("Number of files with no associated mesh terms ", count_nomesh)   
 
 
-download_pubmed('diabetes')
+#download_pubmed('diabetes')
+convertxml_tojson('data/')
 #meshanalysis_ondocument('data/')
 
 # g = Graph()
