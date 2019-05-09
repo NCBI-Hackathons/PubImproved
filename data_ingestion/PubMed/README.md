@@ -1,21 +1,12 @@
 # Pre-requisities
 
-## Dowloading the Data
+Please create an API key by following instructions from: https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/. This key is necessary for programmatically downloading articles from Pubmed.
 
-Please download the MeSH dataset from ftp://ftp.nlm.nih.gov/online/mesh/rdf/2019.
-
-The data is in NTriples format.
-
-## Loading the Data in to MongoDB
-
-```
-$ mkdir data
-$ cp mesh2019.nt data/
-```
+Store this API key in the API_Key.keys
 
 # Running the Script
 
 ```
-$ docker build --rm -f "data_ingestion/MeSH/Dockerfile" -t mesh:latest data_ingestion/MeSH
+$ docker build --rm -f "Dockerfile" -t pubmed:latest .
 $ docker run mesh:latest
 ```
