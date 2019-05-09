@@ -15,7 +15,7 @@ def download_pubmed(disease_term):
     Further the data for each of the PMIDs is stored as separate JSON files
     """
     api_key = open("API_Key.keys","r").readline()
-    url_address = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=' + disease_term + '+randomized+controlled+trial%5Bpublication+type%5D&retmax=10&rettype=text'
+    url_address = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=' + disease_term + '+randomized+controlled+trial%5Bpublication+type%5D&retmax=1000&rettype=text'
     print(url_address)
     #url_encodedaddress = urllib.parse.urlencode(url_address)
     r = requests.get(url_address)
@@ -89,12 +89,3 @@ def meshanalysis_ondocument(data_dir):
 #download_pubmed('diabetes')
 convertxml_tojson('data/')
 #meshanalysis_ondocument('data/')
-
-# g = Graph()
-# g.parse("data/mesh2019.nt", format="nt")
-
-# print(len(g))
-# import pprint
-# for stmt in g:
-#     pprint.pprint(stmt)
-
