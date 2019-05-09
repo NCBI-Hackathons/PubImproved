@@ -9,9 +9,5 @@ RUN pip install -r requirements.txt
 # Docker container in /app directory 
 COPY . /app
 
-RUN pip install requests
-RUN pip install rdflib
-RUN pip install xml.etree
-RUN pip install urllib
 
 CMD [ "python", "./pubmed_load.py" ]
