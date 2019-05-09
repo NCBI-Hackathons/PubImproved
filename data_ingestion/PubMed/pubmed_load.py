@@ -35,7 +35,23 @@ def download_pubmed(disease_term):
             print("ID " + pmid + " already exists not fetching content")
     print(ids)
 
-download_pubmed('diabetes')
+def meshanalysis_ondocument(data_dir):
+    '''
+    If no mesh terms are associated with a file 
+    This function will ideally annotate the document with the MESH on demand API
+    '''
+    count_nomesh = 0
+    files = os.listdir(data_dir)
+    for pmid_file in files:
+        pmid_filecont = ElementTree.parse(data_dir + pmid_file)
+        mesh_list = pmid_filecont.findall('.//MeshHeading') 
+        if len(mesh_list) == 0:
+            count_nomesh += 1
+    print("Number of files with no associated mesh terms ", count_nomesh)   
+
+
+#download_pubmed('diabetes')
+meshanalysis_ondocument('data/')
 
 # g = Graph()
 # g.parse("data/mesh2019.nt", format="nt")
