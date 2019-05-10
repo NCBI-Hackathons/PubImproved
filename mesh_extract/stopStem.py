@@ -8,6 +8,7 @@ Created on Thu May  9 21:35:32 2019
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
+output = {}
 stopwords = stopwords.words('english')
 
 #deprecated

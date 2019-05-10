@@ -28,7 +28,7 @@ def ingestor():
                 print(f'Column names are {"[, .]".join(column)}')
                
                 line_count += 1
-            elif line_count <30:
+            else:
                 for row in column:
                     if '|' in row:
                         lst = row.split("|")

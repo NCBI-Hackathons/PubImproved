@@ -27,14 +27,17 @@ def main():
     inputString = "bemethyl and isinglass"
     
     #search tokens in mesh terms
+    #extractedTokens = set()
     extractedTokens = stopStem.testFuncNew(inputString)
+    op = extractedTokens.split()
     
     print("************Main program**************")
     print("extractedTokens: ")
 
-    print(extractedTokens)
+    for i in op:
+        print(i)
     
-    listMesh = ()
+    listMesh = {}
     listMesh = extractor.returnListMesh()#allTokensList
     
     #print(listMesh)
@@ -44,21 +47,28 @@ def main():
     #print(dictMesh)
     
     
-    matchedMesh = ""
+    matchedMesh = set()
     maxValuesoFar = 0.0
+    strMesh = ""
     
-    for i in extractedTokens:
+    for i in op:
+        #print(i)
         for j in listMesh:
+            #print (j)
             newVal = regEx.demo(i,j)
             if (maxValuesoFar < newVal):
                 maxValuesoFar = newVal
-                matchedMesh = j
+                strMesh = j
+        print ("matchedMesh")
+        print (matchedMesh)
+        matchedMesh.add(strMesh)
+        
         if matchedMesh in dictMesh:
             meshTermsInQuery[matchedMesh] = dictMesh[matchedMesh]    
         print("************meshTermsInQuery***************")
-        print(meshTermsInQuery)
-    
-    return meshTermsInQuery
+        #print(meshTermsInQuery)
+        print(matchedMesh)
+    return matchedMesh#meshTermsInQuery
 
     
 if __name__ == "__main__":
