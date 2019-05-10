@@ -21,8 +21,7 @@ def loadPubMed():
             with codecs.open(filenamerp, 'r', encoding='utf-8',
                  errors='ignore') as f:
                 file_data = json.load(f)
-
-    collection_pubmed.insert(file_data)
+                collection_pubmed.insert(file_data, check_keys=False)
     # client.close()
 
 def queryAll():
@@ -30,3 +29,22 @@ def queryAll():
     for record in records:
         print(record)
 
+def queryPMId(pmId):
+    print("Retrieving the record for "+ str(pmId))
+    record = collection_pubmed.find_one({"pmid": "30894898"})
+    print(record)
+    return record
+
+def queryMeSHTerm(meshTerm):
+    print("Retrieving the record for "+ str(meshTerm))
+    records = collection_pubmed.find({'MeshHeading': str(meshTerm)})
+    for record in records:
+        print(record)
+    return records
+
+def queryMeSHTerms(meshTerms):
+    print("Retrieving the record for meshTerms ")
+    records = collection_pubmed.find({'MeshHeading': { "$all": meshTerms } })
+    for record in records:
+        print(record)
+    return records
