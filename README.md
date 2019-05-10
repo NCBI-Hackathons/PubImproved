@@ -37,6 +37,17 @@ Therefore, we’re building a **search capability for wider usage** that can per
 ..* These MeSH terms are then used to find all the related articles from the PubMed
 ```
 
+### Steps for Reproducing our work
+
+In our project we have identified different pieces that fit together, but can also be good standalone code and containerized each of the modules  separately. The containerization makes our code reproducible, and also abstracts users from the complexity of the implementation.
+
+Given a query, we tokenize the query and identify MESH terms from it, that are then forwarded to our data store which retrieves documents annotated with these MESH terms. Documentation for each of modules is maintained in separate modules, the links which are below:
+
+1. Pubmed Data Ingestion: [https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/data_ingestion/PubMed/README.md]
+2. MESH Data Ingestion: [https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/data_ingestion/MeSH/README.md]
+3. Flask Application: [https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/flask_application/README.md]
+4. Query tokenisation: [https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/mesh_extract/readme.md]
+
 ### Contributors
 
 * Shruthi Chari   -  _charis at rpi dot edu_
