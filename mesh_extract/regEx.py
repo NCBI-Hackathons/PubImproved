@@ -1,6 +1,7 @@
 
 
-# reference: https://www.nltk.org/_modules/nltk/metrics/distance.html
+# Not original work
+# Taken as-is- with minor implementational modification from : https://www.nltk.org/_modules/nltk/metrics/distance.html
 
 
 from __future__ import print_function
