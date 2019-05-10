@@ -6,7 +6,6 @@ import re
 import os
 import pandas as pd
 import json
-import ndjson
 import xmltodict
 
 def download_pubmed(disease_term):
@@ -134,6 +133,8 @@ def extractcontent_fromdocument(data_dir):
         mesh_list = pmid_filecont.findall('.//MeshHeading')
         if len(mesh_list) > 0:
             doc_dict['MeshHeading'] = [mesh_termnode.find('DescriptorName').text for mesh_termnode in mesh_list]
+        else:
+            doc_dict['MeshHeading'] = []
 
         #Extract the portions of abstract
         abstract_comps = pmid_filecont.findall(".//AbstractText")
