@@ -1,0 +1,272 @@
+{
+    "PubmedArticleSet": {
+        "PubmedArticle": {
+            "MedlineCitation": {
+                "@Owner": "NLM",
+                "@Status": "MEDLINE",
+                "PMID": {
+                    "@Version": "1",
+                    "#text": "29234747"
+                },
+                "DateCompleted": {
+                    "Year": "2018",
+                    "Month": "06",
+                    "Day": "05"
+                },
+                "DateRevised": {
+                    "Year": "2018",
+                    "Month": "06",
+                    "Day": "05"
+                },
+                "Article": {
+                    "@PubModel": "Print",
+                    "Journal": {
+                        "ISSN": {
+                            "@IssnType": "Print",
+                            "#text": "1756-2406"
+                        },
+                        "JournalIssue": {
+                            "@CitedMedium": "Print",
+                            "Volume": "10",
+                            "Issue": "4",
+                            "PubDate": {
+                                "MedlineDate": "2017"
+                            }
+                        },
+                        "Title": "European journal of oral implantology",
+                        "ISOAbbreviation": "Eur J Oral Implantol"
+                    },
+                    "ArticleTitle": "Flapless vs flapped implant insertion in patients with controlled type 2 diabetes subjected to delayed loading: 1-year follow-up results from a randomised controlled trial.",
+                    "Pagination": {
+                        "MedlinePgn": "403-413"
+                    },
+                    "Abstract": {
+                        "AbstractText": [
+                            {
+                                "@Label": "PURPOSE",
+                                "@NlmCategory": "OBJECTIVE",
+                                "#text": "To compare the outcome of dental implants placed following full-thickness flap surgery with flapless surgery in controlled type 2 diabetic patients."
+                            },
+                            {
+                                "@Label": "MATERIALS AND METHODS",
+                                "@NlmCategory": "METHODS",
+                                "#text": "A total of 92 controlled type 2 diabetic patients, who needed missing mandibular first molars to be replaced by implants, were selected for a single-centre, parallel group, double-blinded randomised controlled trial. Patients were randomly allocated into two groups: flap (46 patients) vs flapless (46 patients) implant placement. Implants were loaded with metal-ceramic crowns, 4 months after placement in both groups."
+                            },
+                            {
+                                "@Label": "OUTCOME MEASURES",
+                                "@NlmCategory": "METHODS",
+                                "#text": "Implant and crown success, complications, post-operative pain and swelling, plaque index, sulcular bleeding index, pocket depth and HbA1c level. Follow up examinations were made after 24 h, and on the third and seventh days for soft tissue healing, pain and swelling evaluation; then at 6 months and 12 months (after loading) for dental plaque, sulcular bleeding, pocket depth, and HbA1c level evaluation."
+                            },
+                            {
+                                "@Label": "RESULTS",
+                                "@NlmCategory": "RESULTS",
+                                "#text": "After 16 months of implant placement, no dropouts occurred. Five implants failed, two in the flap group and three in the flapless group (4.34% vs 6.52%, McNemar test P = 1, difference = 0.4457, 95% CI of difference = 4.554 to 47.234). Seven prosthesis failures occurred, three in the flap group and four in the flapless group (McNemar test P = 1; difference = 0.4239; 95% CI of difference = 29.95 to 3.86). Two patients in each group were affected by complications. There were statistically insignificant differences in the incidence of complications between the groups (McNemar test P = 1; difference = 0.457; 95% CI of difference = 90.75 to 5.33). After 24 h, the flapped group patients showed significantly greater pain compared with the flapless group (24 h: P = 0.017, difference = 0.37 and 95% CI = 0.673 to -0.067). After the third and seventh postoperative days, the mean pain level in both groups decreased linearly after the treatments (third day: P = 0.183, difference = 0.19 and 95% CI = -0.472 to 0.092; seventh day: P = 0.225, difference = 0.09 and 95% CI = -0.237 to 0.056). The frequency of post-operative swelling \"some + a lot\" at the third day was significantly higher in the full thickness flap group compared with the flapless group (P = 0.002, difference = 0.1835 and 95% CI = -0.0409 to 0.4079). Most of the cases in either of the study groups demonstrated no swelling (P =1.00, difference = 0.00 and 95% CI = -0.3034 to 0.3034) on the seventh post-operative day. The mean plaque index (6 months: 1.00 \u00b1 0.47 vs 0.83 \u00b1 0.79, P = 0.230, difference = 0.17 and 95% CI = -0.450 to 0.110 and 12 months: 1.30 \u00b1 0.67 vs 1.04 \u00b1 0.86, P = 0.123, difference = 0.26 and 95% CI = 0.593 to 0.073), mean sulcular bleeding index (6 months: 1.40 \u00b1 0.52 vs 1.04 \u00b1 0.83, P = 0.018, difference = 0.36 and 95% CI = 0.658 to 0.062 and 12 months: 1.90 \u00b1 0.48 vs 1.17 \u00b1 0.57, P = < 0.001, difference = -0.73 and 95% CI = -0.958 to -0.503) and pocket depth (6 months: 1.30 \u00b1 0.26 vs 1.17 \u00b1 0.25, P = 0.021, difference = -0.13 and 95% CI = - 0.240 to- 0.012 and 12 months: 1.95 \u00b1 0.28 vs 1.56 \u00b1 0.17, P = < 0.001, difference = -0.39 and 95% CI = -0.490 to -0.290) in both groups increased after the treatment and the increase was evident higher in full thickness flap group than flapless group."
+                            },
+                            {
+                                "@Label": "CONCLUSIONS",
+                                "@NlmCategory": "CONCLUSIONS",
+                                "#text": "On the basis of these results, it was concluded that flapless surgical technique could be considered for dental implant placement in type 2 diabetic patients to reduce post-operative pain and swelling."
+                            }
+                        ]
+                    },
+                    "AuthorList": {
+                        "@CompleteYN": "Y",
+                        "Author": [
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Agrawal",
+                                "ForeName": "Kaushal Kishor",
+                                "Initials": "KK"
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Rao",
+                                "ForeName": "Jitendra",
+                                "Initials": "J"
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Anwar",
+                                "ForeName": "Mohd",
+                                "Initials": "M"
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Singh",
+                                "ForeName": "Kalpana",
+                                "Initials": "K"
+                            },
+                            {
+                                "@ValidYN": "Y",
+                                "LastName": "Himanshu",
+                                "ForeName": "D",
+                                "Initials": "D"
+                            }
+                        ]
+                    },
+                    "Language": "eng",
+                    "PublicationTypeList": {
+                        "PublicationType": [
+                            {
+                                "@UI": "D003160",
+                                "#text": "Comparative Study"
+                            },
+                            {
+                                "@UI": "D016428",
+                                "#text": "Journal Article"
+                            },
+                            {
+                                "@UI": "D016449",
+                                "#text": "Randomized Controlled Trial"
+                            }
+                        ]
+                    }
+                },
+                "MedlineJournalInfo": {
+                    "Country": "England",
+                    "MedlineTA": "Eur J Oral Implantol",
+                    "NlmUniqueID": "101473719",
+                    "ISSNLinking": "1756-2406"
+                },
+                "CitationSubset": [
+                    "D",
+                    "IM"
+                ],
+                "MeshHeadingList": {
+                    "MeshHeading": [
+                        {
+                            "DescriptorName": {
+                                "@MajorTopicYN": "N",
+                                "@UI": "D003758",
+                                "#text": "Dental Implantation, Endosseous"
+                            },
+                            "QualifierName": {
+                                "@MajorTopicYN": "Y",
+                                "@UI": "Q000379",
+                                "#text": "methods"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@MajorTopicYN": "Y",
+                                "@UI": "D003924",
+                                "#text": "Diabetes Mellitus, Type 2"
+                            },
+                            "QualifierName": [
+                                {
+                                    "@MajorTopicYN": "N",
+                                    "@UI": "Q000150",
+                                    "#text": "complications"
+                                },
+                                {
+                                    "@MajorTopicYN": "N",
+                                    "@UI": "Q000628",
+                                    "#text": "therapy"
+                                }
+                            ]
+                        },
+                        {
+                            "DescriptorName": {
+                                "@MajorTopicYN": "N",
+                                "@UI": "D004311",
+                                "#text": "Double-Blind Method"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@MajorTopicYN": "N",
+                                "@UI": "D005260",
+                                "#text": "Female"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@MajorTopicYN": "N",
+                                "@UI": "D005500",
+                                "#text": "Follow-Up Studies"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@MajorTopicYN": "N",
+                                "@UI": "D006801",
+                                "#text": "Humans"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@MajorTopicYN": "N",
+                                "@UI": "D008297",
+                                "#text": "Male"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@MajorTopicYN": "N",
+                                "@UI": "D008875",
+                                "#text": "Middle Aged"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@MajorTopicYN": "Y",
+                                "@UI": "D013524",
+                                "#text": "Surgical Flaps"
+                            }
+                        },
+                        {
+                            "DescriptorName": {
+                                "@MajorTopicYN": "N",
+                                "@UI": "D013997",
+                                "#text": "Time Factors"
+                            }
+                        }
+                    ]
+                }
+            },
+            "PubmedData": {
+                "History": {
+                    "PubMedPubDate": [
+                        {
+                            "@PubStatus": "entrez",
+                            "Year": "2017",
+                            "Month": "12",
+                            "Day": "14",
+                            "Hour": "6",
+                            "Minute": "0"
+                        },
+                        {
+                            "@PubStatus": "pubmed",
+                            "Year": "2017",
+                            "Month": "12",
+                            "Day": "14",
+                            "Hour": "6",
+                            "Minute": "0"
+                        },
+                        {
+                            "@PubStatus": "medline",
+                            "Year": "2018",
+                            "Month": "6",
+                            "Day": "6",
+                            "Hour": "6",
+                            "Minute": "0"
+                        }
+                    ]
+                },
+                "PublicationStatus": "ppublish",
+                "ArticleIdList": {
+                    "ArticleId": [
+                        {
+                            "@IdType": "pubmed",
+                            "#text": "29234747"
+                        },
+                        {
+                            "@IdType": "pii",
+                            "#text": "39571"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
