@@ -2,3 +2,6 @@ flask
 pymongo
 flask-pymongo
 pandas
+elasticsearch
+matplotlib
+wordcloud
