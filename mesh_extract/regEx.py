@@ -2,7 +2,11 @@
 
 # Not original work
 # Taken as-is- with minor implementational modification from : https://www.nltk.org/_modules/nltk/metrics/distance.html
+"""
+Created on Thu May  9 11:09:25 2019
 
+@author: nidhi rastogi
+"""
 
 from __future__ import print_function
 from __future__ import division
