@@ -1,4 +1,4 @@
-from .models import new
+from .models import new, word_cloud
 from flask import Flask, request, session, redirect, url_for, render_template, flash
 import pandas as pd
 
@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+#    word_cloud()
     return render_template('pubmed.html')
 
 

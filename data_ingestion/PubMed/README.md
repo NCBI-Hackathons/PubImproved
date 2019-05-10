@@ -8,5 +8,5 @@ Store this API key in the API_Key.keys
 
 ```
 $ docker build --rm -f "Dockerfile" -t pubmed:latest .
-$ docker run mesh:latest
+$ docker run pubmed:latest
 ```
