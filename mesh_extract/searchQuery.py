@@ -30,19 +30,23 @@ def main():
     #search tokens in mesh terms
     extractedTokens = tokenizeQuery(inputString)
     
+    listMesh = returnListMesh
+    dictMesh = returnDictMesh
+    maxValuesoFar = 0.0
+    matchedMesh = ""
+    
+    listSimilarityVals = []
     for i in extractedTokens:
-        for j in 
-        demo(i,s2)
-        closest_match_mesh = max()
-        
-        
-        
-        
-    if k in meshDict:
-                print k, my_dict[k]
+        for j in listMesh:
+            newVal = demo(i,j)
+            if (maxValuesoFar < newVal):
+                maxValuesoFar = newVal
+                matchedMesh = j
+        if matchedMesh in meshDict:
+            meshTermsInQuery.append(matchedMesh,meshDict[matchedMesh])    
         
     
-    
+    return meshTermsInQuery
 
     
 if __name__ == "__main__":
