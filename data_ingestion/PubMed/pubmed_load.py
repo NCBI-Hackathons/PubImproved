@@ -6,6 +6,7 @@ import re
 import os
 import pandas as pd
 import json
+import ndjson
 import xmltodict
 
 def download_pubmed(disease_term):
@@ -96,10 +97,11 @@ def extractcontent_fromdocument(data_dir):
     files = [file_name for file_name in os.listdir(data_dir) if os.path.isfile(os.path.join(data_dir, file_name))]
     simplefields_toinclude = ['PublicationType','Keyword','ArticleTitle']
 
+
     for pmid_file in files:
         doc_dict = {}
         pmid = re.match(r'(.*).xml', pmid_file)[1]  
-
+        doc_dict['pmid'] = pmid
         pmid_filecont = ElementTree.parse(data_dir + pmid_file)
 
         #For fields that are simple lists and have values associated with them        
@@ -112,10 +114,27 @@ def extractcontent_fromdocument(data_dir):
                     doc_dict[field_s] = terms_list[0].text
 
         #Including a special case for MESHHeadings
+        authors_list = pmid_filecont.findall('.//Author')
+        if len(authors_list) > 0:
+            doc_dict['Authors'] = []
+            #Removing none type author issues
+            for author_termnode in authors_list:
+                full_name = ""
+                forename_node = author_termnode.find('ForeName')
+                lastname_node = author_termnode.find('LastName')
+
+                if forename_node is not None:
+                    full_name += forename_node.text 
+                if lastname_node is not None: 
+                    full_name += " " + lastname_node.text
+
+                doc_dict['Authors'].append(full_name)
+        
+        #Including a special case for MESHHeadings
         mesh_list = pmid_filecont.findall('.//MeshHeading')
         if len(mesh_list) > 0:
             doc_dict['MeshHeading'] = [mesh_termnode.find('DescriptorName').text for mesh_termnode in mesh_list]
-        
+
         #Extract the portions of abstract
         abstract_comps = pmid_filecont.findall(".//AbstractText")
         if len(abstract_comps) > 0:
@@ -127,7 +146,7 @@ def extractcontent_fromdocument(data_dir):
         os.makedirs("data/json_new/", exist_ok=True)
 
         with open("data/json_new/" + pmid + ".json", 'w') as outfile:  
-            json.dump(doc_dict, outfile)
+            json.dump(doc_dict, outfile, indent=4)
     
     print("Simple non-nested json created")   
 
