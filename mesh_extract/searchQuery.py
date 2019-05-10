@@ -9,14 +9,14 @@ Created on Thu May  9 15:46:22 2019
 
 from extractor import returnListMesh,returnDictMesh
 from regEx import demo
-from stopStem import testFuncNew,tokenize
+from stopStem import testFuncNew
 from nltk.tokenize import word_tokenize
 
 
 tokenList = dict()
 meshTermsInQuery = []
 
-def tokenizeQuery(query):
+def testFuncNew(query):
      output = [word_tokenize(i) for i in query]
      return output
 

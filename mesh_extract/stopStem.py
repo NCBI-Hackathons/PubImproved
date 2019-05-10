@@ -26,6 +26,6 @@ def tokenize(text):
     
 if __name__ == "__main__":
     text = 'hello bye the the hi'
-    print(testFuncOld(text))
+    #print(testFuncOld(text))
     print(testFuncNew(text))
     print((testFuncNew(text)).split())
