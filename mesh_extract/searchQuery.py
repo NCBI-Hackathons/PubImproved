@@ -7,46 +7,68 @@ Created on Thu May  9 15:46:22 2019
 """
 #from file import function
 
-from extractor import returnListMesh,returnDictMesh
-from regex import demo
-from stopStem import testFuncOld,testFuncNew,tokenize
+import extractor
+import regEx
+import  stopStem
+
 from nltk.tokenize import word_tokenize
 
 
 tokenList = dict()
-meshTermsInQuery = []
-meshDict = dic()
-meshDict = ingestor()
+meshTermsInQuery = {}
 
-def tokenizeQuery(query):
+def testFuncNew(query):
      output = [word_tokenize(i) for i in query]
      return output
 
 def main():
     """ Main program """
     # enter search query string 
-    inputString = "Diabetes"
+    inputString = "bemethyl and isinglass"
     
     #search tokens in mesh terms
-    extractedTokens = tokenizeQuery(inputString)
+    #extractedTokens = set()
+    extractedTokens = stopStem.testFuncNew(inputString)
+    op = extractedTokens.split()
     
-    listMesh = returnListMesh
-    dictMesh = returnDictMesh
+    print("************Main program**************")
+    print("extractedTokens: ")
+
+    for i in op:
+        print(i)
+    
+    listMesh = {}
+    listMesh = extractor.returnListMesh()#allTokensList
+    
+    #print(listMesh)
+    
+    dictMesh = {}
+    dictMesh = extractor.returnDictMesh()
+    #print(dictMesh)
+    
+    
+    matchedMesh = set()
     maxValuesoFar = 0.0
-    matchedMesh = ""
+    strMesh = ""
     
-    listSimilarityVals = []
-    for i in extractedTokens:
+    for i in op:
+        #print(i)
         for j in listMesh:
-            newVal = demo(i,j)
+            #print (j)
+            newVal = regEx.demo(i,j)
             if (maxValuesoFar < newVal):
                 maxValuesoFar = newVal
-                matchedMesh = j
-        if matchedMesh in meshDict:
-            meshTermsInQuery.append(matchedMesh,meshDict[matchedMesh])    
+                strMesh = j
+        print ("matchedMesh")
+        print (matchedMesh)
+        matchedMesh.add(strMesh)
         
-    
-    return meshTermsInQuery
+        if matchedMesh in dictMesh:
+            meshTermsInQuery[matchedMesh] = dictMesh[matchedMesh]    
+        print("************meshTermsInQuery***************")
+        #print(meshTermsInQuery)
+        print(matchedMesh)
+    return matchedMesh#meshTermsInQuery
 
     
 if __name__ == "__main__":

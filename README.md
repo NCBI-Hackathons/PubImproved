@@ -22,7 +22,8 @@ Therefore, we’re building a **search capability for wider usage** that can per
 ```
 
 ### Work Flow Diagram
-   <img src="Slide1.png" width="100%" height="100%">
+ 
+ ![workflow diagram](https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/Workflow_Diagram.png "Logo Title Text 1")
 
 
 ### Steps in Phase I - PubMed Query using Mesh Ontology terms from the User Query
@@ -35,6 +36,19 @@ Therefore, we’re building a **search capability for wider usage** that can per
 5. MeSH terms are queried from the search Query provided by the User
 ..* These MeSH terms are then used to find all the related articles from the PubMed
 ```
+
+### Steps for Reproducing our work
+
+In our project we have identified different pieces that fit together, but can also be good standalone code and containerized each of the modules  separately. The containerization makes our code reproducible, and also abstracts users from the complexity of the implementation.
+
+Given a query, we tokenize the query and identify MESH terms from it, that are then forwarded to our data store which retrieves documents annotated with these MESH terms. Documentation for each of modules is maintained in separate modules, the links which are below:
+
+1. Pubmed Data Ingestion: [https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/data_ingestion/PubMed/README.md]
+2. MESH Data Ingestion: [https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/data_ingestion/MeSH/README.md]
+3. Flask Application: [https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/flask_application/README.md]
+4. Query tokenisation: [https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/mesh_extract/readme.md]
+
+`Presentation Link :` [https://drive.google.com/file/d/1QWVD2ag2os63QH_mod8MmcaGyX_Rk_I0/view?usp=sharing]
 
 ### Contributors
 
