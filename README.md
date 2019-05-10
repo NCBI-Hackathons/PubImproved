@@ -36,6 +36,35 @@ Therefore, we’re building a **search capability for wider usage** that can per
 5. MeSH terms are queried from the search Query provided by the User
 ..* These MeSH terms are then used to find all the related articles from the PubMed
 ```
+### Challenges and Learning
+
+`Data challenges`
+
+There are lots of variations in bibliography data, and it is hard to reconcile between different data sources.
+Many of the existing eUtils APIs available on NCBI do not interoperate, and do not have easy to parse data formats (e.g. JSON).
+There was little documentation for NCBI specific APIs, moreover the documentation was for simpler cases. However, due to the active Slack channel and all the in-house help we received from the hackathon, we were able to refine our API parameters.
+Lack of labeled training data for our task of improving Pubmed search.
+The latest MeSH vocabulary seem to be only be available in RDF format, and it is not clear if there are datasets in other formats.
+Several Heterogeneous data/information sources that are disjoint. This made retrieval of important information slightly difficult
+
+
+`Software challenges`
+
+Elasticsearch data load issues, due to little or no familiarity with the tool. Additionally, due to the nested nature of our JSON data, we faced issues with loading the data and querying the data comprehensively.
+Docker worked well for modularization and containerization. Although, we found it difficult to find a technique to share data between the image and host instance.
+Connecting Elasticsearch python wrapper with our flask application
+We had issues with exposing our Flask app publicly on AWS.
+
+`Learnings`
+
+Through this hackathon, we were able to learn in a demanding and time-constrained setting. We adopted a problem scoping approach, where we continuously revised our techniques to contribute to our end goal of improving the usability of Pubmed’s search. We faced several challenges along the way some unprecedented, and some expected. Yet through them all, we found workarounds and alternative solutions to showcase our ability to solve a niche problem with improving the flexibility of search. Below are some of our key takeaways and learnings from this event. This hackathon has tested our knowledge of tools, and exposed us to some new and powerful utilities and models.
+
+1. Improved knowledge on Docker and working in a container environment
+2. Improved knowledge and experience in developing python Flask applications, and interactive user interface design
+3. Increased understanding on elasticsearch, its drawbacks and how it works in various installation environments such as docker, and anaconda virtual environment
+4. Deeper understanding of the Mesh Ontology including its structure and hierarchy.
+5. Deeper understanding of extracting pertinent information from natural language queries
+6. Indepth research and understanding of PubMed, including its API, interface, search functionality and drawbacks
 
 ### Steps for Reproducing our work
 
