@@ -14,7 +14,7 @@ with open('../data_ingestion/MeSH/output/mesh_labels_narrower_broader.csv') as c
     narrower = []
     broader = []
     line_count = 0
-    allTokens = set()
+    allTokens = dict()
     
     for column in csv_reader:
         if line_count == 0:
@@ -33,18 +33,18 @@ with open('../data_ingestion/MeSH/output/mesh_labels_narrower_broader.csv') as c
                         #allTokens.add(lst[0].strip())
                         label.append(lst[1].strip())
                         print(lst[1].strip())
-                        allTokens.add(lst[1].strip())
+                        allTokens.update(dict(lst[1].strip()=lst[0].strip()))
                         narrower.append(lst[2].strip())
                         print(lst[2].strip())
-                        allTokens.add(lst[2].strip())
+                        allTokens.update(lst[2].strip(),lst[0].strip())
                         broader.append(lst[3].strip())
                         print(lst[3].strip())
-                        allTokens.add(lst[3].strip())
+                        allTokens.update(lst[3].strip(),lst[0].strip())
                         #print(line_count, f'\t{term} {label} {narrower} {broader}')
             #print(column)
             line_count += 1
     
-    #print(allTokens)
+    print(allTokens)
     
     #for x in 
     print(f'Processed {line_count} lines.')

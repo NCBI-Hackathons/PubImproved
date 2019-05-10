@@ -10,16 +10,9 @@ import extractor
 
 def main():
     """ Main program """
-    testString = "Diabetes and hyper-tension"
-    
-    
-    
-    
-    
+    testString = "Diabetes"
     
 
-
-
-
+    
 if __name__ == "__main__":
     main()
