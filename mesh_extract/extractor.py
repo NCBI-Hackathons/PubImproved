@@ -29,18 +29,22 @@ with open('../data_ingestion/MeSH/output/mesh_labels_narrower_broader.csv') as c
                     if stringcount == 4:
                         #print (row)
                         term.append(lst[0].strip())
+                        print(lst[0].strip())
                         #allTokens.add(lst[0].strip())
                         label.append(lst[1].strip())
+                        print(lst[1].strip())
                         allTokens.add(lst[1].strip())
                         narrower.append(lst[2].strip())
+                        print(lst[2].strip())
                         allTokens.add(lst[2].strip())
                         broader.append(lst[3].strip())
+                        print(lst[3].strip())
                         allTokens.add(lst[3].strip())
                         #print(line_count, f'\t{term} {label} {narrower} {broader}')
             #print(column)
             line_count += 1
     
-    print(allTokens)
+    #print(allTokens)
     
     #for x in 
     print(f'Processed {line_count} lines.')
