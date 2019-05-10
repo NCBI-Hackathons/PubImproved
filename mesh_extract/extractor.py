@@ -18,7 +18,7 @@ def ingestor():
         broader = []
         line_count = 0
         allTokensDict = dict()
-        allTokensList = []
+        allTokensList = {}
         
         for column in csv_reader:
             if line_count == 0:
@@ -39,17 +39,17 @@ def ingestor():
                             label.append(lst[1].strip())
                             print(lst[1].strip())
                             allTokensDict[lst[1].strip()] = lst[0].strip()
-                            allTokensList.append(lst[1].strip())
+                            allTokensList.add(lst[1].strip())
                             
                             narrower.append(lst[2].strip())
                             print(lst[2].strip())
                             allTokensDict[lst[2].strip()] = lst[0].strip()
-                            allTokensList.append(lst[2].strip())
+                            allTokensList.add(lst[2].strip())
                             
                             broader.append(lst[3].strip())
                             print(lst[3].strip())
                             allTokensDict[lst[3].strip()] = lst[0].strip()
-                            allTokensList.append(lst[3].strip())
+                            allTokensList.add(lst[3].strip())
                             #print(line_count, f'\t{term} {label} {narrower} {broader}')
                 #print(column)
                 line_count += 1

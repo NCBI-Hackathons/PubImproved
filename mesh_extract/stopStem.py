@@ -10,6 +10,7 @@ from nltk.tokenize import word_tokenize
 
 cachedStopWords = stopwords.words("english")
 
+#deprecated
 def testFuncOld(text):
     output = ' '.join([word for word in text.split() if word not in stopwords.words("english")])
     return output
