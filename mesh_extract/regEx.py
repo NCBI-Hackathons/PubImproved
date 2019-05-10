@@ -190,22 +190,17 @@ def jaro_winkler_similarity(s1, s2, p=0.1, max_l=4):
 
 
 
-def demo():
-    string_distance_examples = [
+def demo(s1,s2):
+    return (1 - jaro_winkler_similarity(s1, s2))
+'''    string_distance_examples = [
         ("Transderm Nitro", "Nitro"),
         ("abcdef", "acbdef"),
         ("language", "lnaguaeg"),
         ("language", "lnaugage"),
         ("language", "lngauage"),
     ]
-    for s1, s2 in string_distance_examples:
-        print(
-            "Jaro-Winkler distance btwn '%s' and '%s':" % (s1, s2),
-            1 - jaro_winkler_similarity(s1, s2),
-        )
-
-
+'''
 
 
 if __name__ == '__main__':
-    demo()
+    print(demo("Transderm Nitro","Nitro"))
