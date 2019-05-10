@@ -192,7 +192,7 @@ def jaro_winkler_similarity(s1, s2, p=0.1, max_l=4):
 
 def demo():
     string_distance_examples = [
-        ("rain", "shine"),
+        ("Transderm Nitro", "Nitro"),
         ("abcdef", "acbdef"),
         ("language", "lnaguaeg"),
         ("language", "lnaugage"),
