@@ -48,6 +48,8 @@ Given a query, we tokenize the query and identify MESH terms from it, that are t
 3. Flask Application: [https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/flask_application/README.md]
 4. Query tokenisation: [https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/mesh_extract/readme.md]
 
+`Presentation Link :` [https://drive.google.com/file/d/1QWVD2ag2os63QH_mod8MmcaGyX_Rk_I0/view?usp=sharing]
+
 ### Contributors
 
 * Shruthi Chari   -  _charis at rpi dot edu_
