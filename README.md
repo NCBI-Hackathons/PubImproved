@@ -26,7 +26,7 @@ Therefore, we’re building a **search capability for wider usage** that can per
    <img src="Slide1.png" width="100%" height="100%">
  
  `Work Done During the NIH Women Hackathon`
-   ![workflow diagram](https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/Workflow_Diagram.png "Workflow Diagram")
+ ![workflow diagram](https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/Workflow%20_Diagram.png "Logo Title Text 1")
 
 
 ### Steps in Phase I - PubMed Query using Mesh Ontology terms from the User Query
