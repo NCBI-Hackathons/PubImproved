@@ -22,7 +22,11 @@ Therefore, we’re building a **search capability for wider usage** that can per
 ```
 
 ### Work Flow Diagram
+`Birds Eye View`
    <img src="Slide1.png" width="100%" height="100%">
+ 
+ `Work Done During the NIH Women Hackathon`
+   <img src="Workflow_Diagram.png" width="100%" height="100%">
 
 
 ### Steps in Phase I - PubMed Query using Mesh Ontology terms from the User Query
