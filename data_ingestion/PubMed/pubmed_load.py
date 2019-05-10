@@ -22,9 +22,9 @@ def download_pubmed(disease_term):
     xml_content = ElementTree.fromstring(r.content)
     print(xml_content)
     #Add a pitfall check for empty id nodes
-    data_dir = os.makedirs("data/", exist_ok=True)
+    data_dir = os.makedirs("data/xml/", exist_ok=True)
     ids = [id_node.text for id_node in xml_content.findall('.//Id')]
-    already_existingfiles = [re.match(r'(.*).xml', id_present) for id_present in os.listdir("data/")]
+    already_existingfiles = [re.match(r'(.*).xml', id_present) for id_present in os.listdir("data/xml/")]
     #Ideally when there is an elasticsearch instance running, we would feed the files into that
     for pmid in ids:
         #Only create new files for unseen pmids
@@ -33,7 +33,7 @@ def download_pubmed(disease_term):
             #Fetch content for good requests
             if request_idfetch.status_code == 200:
                 xml_contentfetch = ElementTree.fromstring(request_idfetch.content)
-                with open("data/" + pmid + ".xml", "w") as f:
+                with open("data/xml/" + pmid + ".xml", "w") as f:
                     f.write(ElementTree.tostring(xml_contentfetch).decode("utf-8"))
         else:
             print("ID " + pmid + " already exists not fetching content")
@@ -46,12 +46,13 @@ def convertxml_tojson(data_dir):
     files = [file_name for file_name in os.listdir(data_dir) if os.path.isfile(os.path.join(data_dir, file_name))]
     count_pmids=0
     for pmid_file in files:
+        #Read XML file
         with open(data_dir + pmid_file, 'r') as f:
             xmlString = f.read() 
-        
+        #Find the pmid from the file name
         pmid = re.match(r'(.*).xml', pmid_file)[1]    
-        
-        jsonString = json.dumps(xmltodict.parse(xmlString), indent=4)
+        #Do a json conversion of the xml string
+        jsonString = json.dumps(xmltodict.parse(xmlString))
         os.makedirs("data/json/", exist_ok=True)
         json_filename = 'data/json/' + pmid + '.json'
         with open(json_filename,'w') as f:
@@ -66,7 +67,7 @@ def meshanalysis_ondocument(data_dir):
     This function will ideally annotate the document with the MESH on demand API
     '''
     count_nomesh = 0
-    files = os.listdir(data_dir)
+    files = [file_name for file_name in os.listdir(data_dir) if os.path.isfile(os.path.join(data_dir, file_name))]
     mesh_countdict = {}
     for pmid_file in files:
         pmid_filecont = ElementTree.parse(data_dir + pmid_file)
@@ -83,7 +84,52 @@ def meshanalysis_ondocument(data_dir):
                     mesh_countdict[mesh_term] += 1
     data = pd.Series(mesh_countdict)
     mydata = data.to_csv('meshcount.csv', sep='|',encoding='utf-8')
-    print("Number of files with no associated mesh terms ", count_nomesh)   
+    print("Number of files with no associated mesh terms ", count_nomesh)
+
+def extractcontent_fromdocument(data_dir):
+    '''
+    This function serves to extract the content from the XML:
+    In a way that is easily ingestable into elasticsearch
+    Here we output a non-nested JSON with a few fields, 
+    e.g.: ArticleTitle, AbstractText, AuthorList, PublicationType, MeshHeading 
+    '''
+    files = [file_name for file_name in os.listdir(data_dir) if os.path.isfile(os.path.join(data_dir, file_name))]
+    simplefields_toinclude = ['PublicationType','Keyword','ArticleTitle']
+
+    for pmid_file in files:
+        doc_dict = {}
+        pmid = re.match(r'(.*).xml', pmid_file)[1]  
+
+        pmid_filecont = ElementTree.parse(data_dir + pmid_file)
+
+        #For fields that are simple lists and have values associated with them        
+        for field_s in simplefields_toinclude:
+            terms_list = pmid_filecont.findall('.//' + field_s)
+            if len(terms_list) > 0:
+                if len(terms_list) > 1:
+                    doc_dict[field_s] = [t.text for t in terms_list]
+                else:
+                    doc_dict[field_s] = terms_list[0].text
+
+        #Including a special case for MESHHeadings
+        mesh_list = pmid_filecont.findall('.//MeshHeading')
+        if len(mesh_list) > 0:
+            doc_dict['MeshHeading'] = [mesh_termnode.find('DescriptorName').text for mesh_termnode in mesh_list]
+        
+        #Extract the portions of abstract
+        abstract_comps = pmid_filecont.findall(".//AbstractText")
+        if len(abstract_comps) > 0:
+            for abstract_comp in abstract_comps:
+                #Only allow legit labeled data
+                if len(abstract_comp.attrib) > 0:
+                    doc_dict['Abstract_' + abstract_comp.attrib['Label']] = abstract_comp.text
+        #Creating a dir if it doesn't exist
+        os.makedirs("data/json_new/", exist_ok=True)
+
+        with open("data/json_new/" + pmid + ".json", 'w') as outfile:  
+            json.dump(doc_dict, outfile)
+    
+    print("Simple non-nested json created")   
 
 if __name__ == '__main__':
     '''
@@ -93,5 +139,6 @@ if __name__ == '__main__':
     3. meshanalysis_ondocument: additionally accumulates MESH terms for all files to build a wordcloud
     '''
     #download_pubmed('diabetes')
-    convertxml_tojson('data/')
-    #meshanalysis_ondocument('data/')
+    #convertxml_tojson('data/xml/')
+    #meshanalysis_ondocument('data/xml/')
+    extractcontent_fromdocument('data/xml/')

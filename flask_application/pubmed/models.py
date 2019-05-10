@@ -1,6 +1,4 @@
 from flask import Flask, redirect, url_for, request, render_template
-#from pymongo import MongoClient
-import os
 from flask_pymongo import PyMongo
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
@@ -9,12 +7,7 @@ from pylab import *
 from wordcloud import WordCloud
 import csv
 
-
-
 app = Flask(__name__)
-
-#client = MongoClient(os.environ['DB_PORT_27017_TCP_ADDR'], 27017)
-#db = client.bibsdb
 
 app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase"
 mongo = PyMongo(app)
