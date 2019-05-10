@@ -7,7 +7,7 @@ from __future__ import print_function
 from __future__ import division
 
 import warnings
-import operator
+
 def jaro_similarity(s1, s2):
     """
    Computes the Jaro similarity between 2 sequences from:
