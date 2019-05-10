@@ -1,13 +1,18 @@
 
 
-# reference: https://www.nltk.org/_modules/nltk/metrics/distance.html
+# Not original work
+# Taken as-is- with minor implementational modification from : https://www.nltk.org/_modules/nltk/metrics/distance.html
+"""
+Created on Thu May  9 11:09:25 2019
 
+@author: nidhi rastogi
+"""
 
 from __future__ import print_function
 from __future__ import division
 
 import warnings
-import operator
+
 def jaro_similarity(s1, s2):
     """
    Computes the Jaro similarity between 2 sequences from:
@@ -190,22 +195,17 @@ def jaro_winkler_similarity(s1, s2, p=0.1, max_l=4):
 
 
 
-def demo():
-    string_distance_examples = [
+def demo(s1,s2):
+    return (1 - jaro_winkler_similarity(s1, s2))
+'''    string_distance_examples = [
         ("Transderm Nitro", "Nitro"),
         ("abcdef", "acbdef"),
         ("language", "lnaguaeg"),
         ("language", "lnaugage"),
         ("language", "lngauage"),
     ]
-    for s1, s2 in string_distance_examples:
-        print(
-            "Jaro-Winkler distance btwn '%s' and '%s':" % (s1, s2),
-            1 - jaro_winkler_similarity(s1, s2),
-        )
-
-
+'''
 
 
 if __name__ == '__main__':
-    demo()
+    print(demo("Transderm Nitro","Nitro"))
