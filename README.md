@@ -23,7 +23,7 @@ Therefore, we’re building a **search capability for wider usage** that can per
 
 ### Work Flow Diagram
  
- ![workflow diagram](https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/Workflow%20_Diagram.png "Logo Title Text 1")
+ ![workflow diagram](https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/Workflow_Diagram.png "Logo Title Text 1")
 
 
 ### Steps in Phase I - PubMed Query using Mesh Ontology terms from the User Query
