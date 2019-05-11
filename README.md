@@ -6,6 +6,7 @@
 ### Motivation
 Current search capabilities on Pubmed (the latest alpha version)allows for search on Pubmed articles which is based on mesh terms. It’s impractical to assume that non-experts know about the mesh terms or their usage. It does not consider cultural differences in the terms used to describe diseases, conditions, and related information.
 
+For example, search for “Diabetes Melitus” may not be a common practice by non-expert users of PubMed. But search for Diabetes, Sugar, and so on is more reasonable and expected from a wider audience searching for knowledge sources on pubmed. Specifically, a user may search using not just the term _diabetes_, but also _hypertension_, which may commonly be refered to as high BP. Another use case is that there are instances when search terms can be very restrictive and may not display enough results (this limitations currently exists). A potential way to address this problem is that we can relax search terms and display relevant results related to the scientist.
 
 ### Goal
 
