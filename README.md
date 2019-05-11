@@ -1,7 +1,7 @@
 ![logo](https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/pubmedplus.png "Logo Title Text 1")
 # Broadening the Usability of [Pubmed](https://www.ncbi.nlm.nih.gov/pubmed/)
 
-`### What is Pubmed:` PubMed is a free search engine accessing primarily the MEDLINE database of references and abstracts on life sciences and biomedical topics.
+`What is Pubmed:` PubMed is a free search engine accessing primarily the MEDLINE database of references and abstracts on life sciences and biomedical topics.
 
 ### Motivation
 
