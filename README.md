@@ -1,5 +1,5 @@
 ![logo](https://github.com/NCBI-Hackathons/PubMedPlus/blob/master/pubmedplus.png "Logo Title Text 1")
-# Broadening the Usability of Pubmed
+# Broadening the Usability of [Pubmed](https://www.ncbi.nlm.nih.gov/pubmed/)
 
 ### Goal
 
